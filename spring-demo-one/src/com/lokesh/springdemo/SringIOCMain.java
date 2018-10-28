@@ -28,6 +28,7 @@ public class SringIOCMain {
 		coach=context.getBean("myCricketCoach",Coach.class);
 		System.out.println(coach.getDailyFortune());
 		
+		
 		context.close();
 
 	}
