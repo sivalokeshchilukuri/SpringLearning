@@ -13,10 +13,10 @@ public class MyApp {
 		//System.out.println(coach.getDailyWorkout());
 		
 		//This this is hardcoded--Need to overcome this using Spring approach
-		/*Coach coach=new TrackCoach();
+		Coach coach=new TrackCoach();
 		System.out.println(coach.getDailyWorkout());
 		coach=new BaseballCoach();
-		System.out.println(coach.getDailyWorkout());*/
+		System.out.println(coach.getDailyWorkout());
 		
 		
 		//need to ask object factory to give the objects instead of creating on your own
