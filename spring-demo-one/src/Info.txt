@@ -1,0 +1,5 @@
+Spring Container: responsibility is to create and manage the objects and injecting their dependencies.
+
+Inversion of Control: Create and manage Objects
+
+Dependency Injection: Manage Dependencies

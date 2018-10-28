@@ -13,11 +13,19 @@ public class SringIOCMain {
 		/*Coach coach=(Coach) context.getBean("myTrackCoach");
 		System.out.println(coach.getDailyWorkout());*/
 		
+		//For the Constructor Dependency Injection
 		Coach coach= context.getBean("myTrackCoach",Coach.class);
 		System.out.println(coach.getDailyWorkout());
+		System.out.println(coach.getDailyFortune());
 		
 		coach=context.getBean("myBaseballCoach",Coach.class);
 		System.out.println(coach.getDailyWorkout());
+		System.out.println(coach.getDailyFortune());
+		
+		
+		//For the Setter Dependency Injection
+		coach=context.getBean("myCricketCoach",Coach.class);
+		System.out.println(coach.getDailyFortune());
 		
 		context.close();
 

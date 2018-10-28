@@ -16,12 +16,25 @@
     	</bean> -->
     
  	<bean id="myTrackCoach"
- 		class="com.lokesh.springdemo.TrackCoach">	 		
+ 		class="com.lokesh.springdemo.TrackCoach">
+ 		<constructor-arg ref= "fortuneService" />  	 		
  	</bean>
 
     
     <bean id="myBaseballCoach"
-        class="com.lokesh.springdemo.BaseballCoach">         
+        class="com.lokesh.springdemo.BaseballCoach"> 
+        <constructor-arg ref= "fortuneService" />        
+    </bean>
+    
+    <!-- For Dependency setter injection -->
+    <bean id="myCricketCoach"
+        class="com.lokesh.springdemo.CricketCoach"> 
+        <property name="fortuneService" ref="fortuneService"></property>   
+    </bean>
+    
+    <!-- For Dependency constructor injection -->
+    <bean id="fortuneService"
+        class="com.lokesh.springdemo.HappyFortuneService">         
     </bean>
     
 
