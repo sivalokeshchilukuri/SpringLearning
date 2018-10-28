@@ -18,6 +18,7 @@ public class SringIOCMain {
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getDailyFortune());
 		
+		//For the Constructor Dependency Injection
 		coach=context.getBean("myBaseballCoach",Coach.class);
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getDailyFortune());
