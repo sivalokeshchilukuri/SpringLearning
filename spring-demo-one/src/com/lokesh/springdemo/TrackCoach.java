@@ -25,5 +25,16 @@ public class TrackCoach implements Coach {
 		return "From Track Coach "+fortuneService.getFortune();
 	}
 
+	
+	//Init method--Custom code during bean life cycle
+	public void initTrack() {
+		System.out.println("Inside init track method");
+	}
+	
+	
+	//Destroy method--Custom code during bean life cycle
+	public void destroyTrack() {
+		System.out.println("Inside destroy track method");
+	}
 
 }
