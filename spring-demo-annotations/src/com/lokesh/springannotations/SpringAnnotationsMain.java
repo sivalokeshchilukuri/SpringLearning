@@ -10,14 +10,7 @@ public class SpringAnnotationsMain {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"springdemoAnnotations-applicationContext.xml");
 
-		// load the bean from container
-		/*
-		 * Coach coach=(Coach) context.getBean("myTrackCoach");
-		 * System.out.println(coach.getDailyWorkout());
-		 */
-
-		// For the Constructor Dependency Injection
-		CricketCoach coach = context.getBean("theCricketCoach", CricketCoach.class);
+		CricketCoach coach = context.getBean("theCricketCoach", CricketCoach.class);//cricketCoach default bean id
 		System.out.println(coach.getDailyWorkout());
 
 		context.close();
