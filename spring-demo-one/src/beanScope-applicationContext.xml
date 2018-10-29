@@ -9,35 +9,15 @@
 
 	
     <!-- Define your beans here -->
-    
-    <!-- define the dependency -->
-   <!--  <bean id="myFortuneService"
-    		class="com.luv2code.springdemo.HappyFortuneService">
-    	</bean> -->
-    
  	<bean id="myTrackCoach"
  		class="com.lokesh.springdemo.TrackCoach">
  		<constructor-arg ref= "fortuneService" />  	 		
  	</bean>
-
-    
+   
     <bean id="myBaseballCoach"
+    	scope="prototype"
         class="com.lokesh.springdemo.BaseballCoach"> 
         <constructor-arg ref= "fortuneService" />        
-    </bean>
-    
-    <!-- For Dependency setter injection -->
-    <bean id="myCricketCoach"
-        class="com.lokesh.springdemo.CricketCoach"> 
-        <property name="fortuneService" ref="fortuneService"></property> 
-        
-        <!-- Injecting Literal Values -->  
-        <!-- <property name="emailAddress" value="lokesh@gmail.com"></property>
-        <property name="team" value="Lokesh"></property> -->
-        
-        <!-- Read literal values fom properties file -->
-        <property name="emailAddress" value="${lokesh.email}"></property>
-        <property name="team" value="${lokesh.team}"></property>
     </bean>
     
     <!-- For Dependency constructor injection -->
@@ -45,7 +25,6 @@
         class="com.lokesh.springdemo.HappyFortuneService">         
     </bean>
     
-    <context:property-placeholder location="classpath:sports.properties"/>
     
 
 </beans>

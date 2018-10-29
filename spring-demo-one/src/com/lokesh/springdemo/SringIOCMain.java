@@ -22,10 +22,12 @@ public class SringIOCMain {
 		coach=context.getBean("myBaseballCoach",Coach.class);
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getDailyFortune());
-				
+		
+		
 		//For the Setter Dependency Injection
 		coach=context.getBean("myCricketCoach",Coach.class);
 		System.out.println(coach.getDailyFortune());
+		
 		
 		context.close();
 
