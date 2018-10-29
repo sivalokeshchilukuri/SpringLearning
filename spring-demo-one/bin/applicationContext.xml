@@ -29,13 +29,23 @@
     <!-- For Dependency setter injection -->
     <bean id="myCricketCoach"
         class="com.lokesh.springdemo.CricketCoach"> 
-        <property name="fortuneService" ref="fortuneService"></property>   
+        <property name="fortuneService" ref="fortuneService"></property> 
+        
+        <!-- Injecting Literal Values -->  
+        <!-- <property name="emailAddress" value="lokesh@gmail.com"></property>
+        <property name="team" value="Lokesh"></property> -->
+        
+        <!-- Read literal values fom properties file -->
+        <property name="emailAddress" value="${lokesh.email}"></property>
+        <property name="team" value="${lokesh.team}"></property>
     </bean>
     
     <!-- For Dependency constructor injection -->
     <bean id="fortuneService"
         class="com.lokesh.springdemo.HappyFortuneService">         
     </bean>
+    
+    <context:property-placeholder location="classpath:sports.properties"/>
     
 
 </beans>
